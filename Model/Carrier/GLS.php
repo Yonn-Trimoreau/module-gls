@@ -8,7 +8,7 @@ use \Magento\Shipping\Model\Carrier\AbstractCarrierOnline;
 use \Magento\Shipping\Model\Carrier\CarrierInterface;
 use \Acyba\GLS\Helper\Tools;
 use Magento\Framework\App\ResourceConnection;
-use Owebia\AdvancedSettingCore\Model\Wrapper;
+use Owebia\SharedPhpConfig\Model\Wrapper;
 use Owebia\AdvancedShipping\Model\CallbackHandlerFactory;
 use Owebia\AdvancedShipping\Model\Wrapper\RateResult as RateResultWrapper;
 
@@ -48,17 +48,17 @@ class GLS extends AbstractCarrierOnline implements CarrierInterface
     protected $trackStatusFactory = null;
 
     /**
-     * @var \Owebia\AdvancedSettingCore\Helper\Registry
+     * @var \Owebia\SharedPhpConfig\Helper\Registry
      */
     protected $registryHelper = null;
 
     /**
-     * @var \Owebia\AdvancedSettingCore\Helper\Config
+     * @var \Owebia\SharedPhpConfig\Helper\Config
      */
     protected $configHelper = null;
 
     /**
-     * @var \Owebia\AdvancedSettingCore\Logger\Logger
+     * @var \Owebia\SharedPhpConfig\Logger\Logger
      */
     protected $debugLogger = null;
 
@@ -89,9 +89,9 @@ class GLS extends AbstractCarrierOnline implements CarrierInterface
      * @param \Magento\Directory\Helper\Data $directoryData
      * @param \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry
      * @param \Magento\Framework\ObjectManagerInterface $objectManager
-     * @param \Owebia\AdvancedSettingCore\Helper\Registry $registryHelper
-     * @param \Owebia\AdvancedSettingCore\Helper\Config $configHelper
-     * @param \Owebia\AdvancedSettingCore\Logger\Logger $debugLogger
+     * @param \Owebia\SharedPhpConfig\Helper\Registry $registryHelper
+     * @param \Owebia\SharedPhpConfig\Helper\Config $configHelper
+     * @param \Owebia\SharedPhpConfig\Logger\Logger $debugLogger
      * @param Tools $helperTools
      * @param ResourceConnection $resourceConnection
      * @param RateRequest $rateRequest
@@ -115,9 +115,9 @@ class GLS extends AbstractCarrierOnline implements CarrierInterface
         \Magento\CatalogInventory\Api\StockRegistryInterface $stockRegistry,
 
         \Magento\Framework\ObjectManagerInterface $objectManager,
-        \Owebia\AdvancedSettingCore\Helper\Registry $registryHelper,
-        \Owebia\AdvancedSettingCore\Helper\Config $configHelper,
-        \Owebia\AdvancedSettingCore\Logger\Logger $debugLogger,
+        \Owebia\SharedPhpConfig\Helper\Registry $registryHelper,
+        \Owebia\SharedPhpConfig\Helper\Config $configHelper,
+        \Owebia\SharedPhpConfig\Logger\Logger $debugLogger,
         Tools $helperTools,
         ResourceConnection $resourceConnection,
         RateRequest $rateRequest,
